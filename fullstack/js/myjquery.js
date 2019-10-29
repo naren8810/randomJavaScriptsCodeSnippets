@@ -3,6 +3,11 @@ $(document).ready(function(){
 		$("#welcomemsg").text("HELLO JQUERY");
 	});
 
+	$(function(){
+		$("#jqueryDiv3").draggable();
+		$("#jqueryDiv3").text("Drag Me Anywhere! Remember to Put me Back!").css("color","whitesmoke");
+	});
+
 	$("#jqueryBtn").click(function(){
 		var jQdiv1 = $("#jqueryDiv1").fadeToggle("slow",function(){
 			alert("Text:" + $("#btn").text() + $("#nodeInJsP1").html());
