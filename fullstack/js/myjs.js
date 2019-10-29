@@ -1,16 +1,19 @@
 var winFuncTimer = setInterval(windowSizeFunc, 3000);
-function windowSizeFunc(event){
-  var windowWidth = window.innerWidth
+
+var windowWidth = window.innerWidth
   || document.documentElement.clientWidth
   || document.body.clientWidth;
 
   var windowHeight = document.innerHeight
   || document.documentElement.clientHeight
   || document.body.clientHeight;
+function windowSizeFunc(e){
 
-  var x = event.clientX;
-  var y = event.clientY;
-  var coor = "Coordinates: (" + x + "," + y + ")";
+  var cx = e.clientX;
+  var cy = e.clientY;
+  var sx = e.screenX;
+  var sy = e.screenY;
+  var coor = "Coordinates Client: (" + cx + "," + cy + ")" + "Coordinates Screen: (" + sx + "," + sy + ")";
   document.getElementById("hw").innerHTML = coor;
   var hw = document.getElementById("hw");
   hw.innerHTML += "Browser Width: " + windowWidth + ", height: " + windowHeight;
@@ -30,8 +33,7 @@ var myDocument = (function(){
 
 
 //wndow.location
-var loc  = document.getElementById("location");
-loc.innerHTML = "<br>Locations: " + document.location + ", " + location.hostname + ", " + location.pathname + ", " + location.protocol ;
+document.getElementById("locationP").innerHTML += "<br>Locations: " + document.location + ", " + document.location.hostname + ", " + document.location.pathname + ", " + document.location.protocol ;
 
 //window.navigator
 var nav = document.getElementById("navigator");

@@ -10,6 +10,8 @@
 <title>Full Stack Web Development</title>
 
 <link rel="stylesheet" href="css/style.css">
+ 
+
 <style>
 * {
   box-sizing:border-box;
@@ -42,7 +44,15 @@
     width:100%; /* The width is 100%, when the viewport is 800px or smaller */
   }
 }
+
+.colorTextGreen{
+	color: green;
+	font-size: 50%;
+	text-align: center;
+}
 </style>
+
+ 
 </head>
 <body onload="welcomealert()" onbeforeprint="beforePrint()" onafterprint="afterPrint()" onmousemove="windowSizeFunc(event)">
 	<nav class="mynav">
@@ -54,7 +64,7 @@
 	    </ul>
 	</nav>
 	<span id="hw"></span>
-	<span id="location"></span>
+	<p id="locationP"> Location</p>
 	<span id="navigator"></span>
 	<span id="time"></span>
 	<h2 id="welcomemsg" onclick="document.getElementById('welcomdemo').innerHTML = Date()" onmouseover="this.style.color = 'blue'">welcome </h2>
@@ -110,6 +120,19 @@
 	<div id="showtempdev3" style="margin: 10px auto;">
 		<button onclick="showTemplate(),setTimeout(templatealert,2000)" class="templatebtn3">Template3</button>
 	</div>
+
+	<button type="button" id="ajaxJQuery">AJAXJQuery</button>
+	<div id="ajaxJQueryDiv"><p>Let jQuery AJAX Change This Text</p></div>
+
+	<button type="button" id="jqueryBtn">JQUERY(Single&Duble Click Animation)</button>
+	<button type="button" id="jqueryStopBtn"> STOP Animation </button>
+	<p id="jqueryPtag">Text in jQuery</p>
+	<div id="jqueryDiv1" style="background:#98bf21;height:100px;width:100px;position:relative;">
+	</div>
+	<div id="jqueryDiv2" style="background:#000;height:100px;width:100px;position:relative;">
+	</div>
+	<div id="jqueryDiv3" style="background:#666;height:100px;width:100px;position:relative;">
+	</div>
 	
 	<div>
 		<canvas id="mycanvas" width="300" height="150" style="border:px solid #d3d3d3;">
@@ -160,14 +183,26 @@
 		<img src="" alt="Flower Image">	
 	</template>
 
-	<!-- <script type="text/javascript" src="js/myjs.js"></script> -->
-
-	<script>
+<script type="text/javascript" src="js/myjs.js"></script> 
+ 
+	<!-- <script>
 		window.onload = function(){
 			var element = document.createElement("script");
 			element.src = "js/myjs.js";
-			document.body.appendChild(element);
+			document.head.appendChild(element);
 		}
+	</script> -->
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.js"
+	  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+	  crossorigin="anonymous">
+  	</script>
+	<script
+	  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+	  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+	  crossorigin="anonymous">
 	</script>
+	<script type="text/javascript" src="js/myjquery.js"></script> 
+
 </body>
 </html5>

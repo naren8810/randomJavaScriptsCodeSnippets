@@ -118,3 +118,7 @@ p#intromsg::after{
   padding: 10px;
   border: 1px solid #aaaaaa;
 }
+
+.colorTextGreen{
+	color: green;
+}
