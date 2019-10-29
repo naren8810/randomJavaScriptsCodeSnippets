@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html5 lang="en-US">
+<head>
+<meta charset=utf-8>
+<meta name=description content="Full Stack Web Development">
+<meta name="keywords" content="HTML,CSS,BOOTSTRAP,JS,JQUERY,PHP">
+<meta name="author" content="Narendra Yadav">
+<meta http-equiv="refresh" content="10000000">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<title>Full Stack Web Development</title>
+
+<link rel="stylesheet" href="css/style.css">
+<style>
+* {
+  box-sizing:border-box;
+}
+
+.left {
+  background-color:#2196F3;
+  padding:20px;
+  float:left;
+  width:20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color:#f1f1f1;
+  padding:20px;
+  float:left;
+  width:60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color:#4CAF50;
+  padding:20px;
+  float:left;
+  width:20%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:800px) {
+  .left, .main, .right {
+    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+</style>
+</head>
+<body onload="welcomealert()" onbeforeprint="beforePrint()" onafterprint="afterPrint()" onmousemove="windowSizeFunc(event)">
+	<nav class="mynav">
+	    <ul class="mynavul">
+	        <li><a class="active" href="#">Home</a></li><!--
+	     --><li><a href="#portfolio">Portfolio</a></li><!--
+	     --><li><a href="#about">About</a></li><!--
+	     --><li><a href="#">Conact</a></li>
+	    </ul>
+	</nav>
+	<span id="hw"></span>
+	<span id="location"></span>
+	<span id="navigator"></span>
+	<span id="time"></span>
+	<h2 id="welcomemsg" onclick="document.getElementById('welcomdemo').innerHTML = Date()" onmouseover="this.style.color = 'blue'">welcome </h2>
+	<p id="welcomdemo"></p>
+	<p id="intromsg" contenteditable="true" spellcheck="true">this is the <strong><i>full stack development</i></strong> course</p>
+	<span id="counterSpan"></span>
+
+	<button type="button" id="counterBtn" onclick="myCounterFunc()">Counter Increament</button>	
+	<span id="counterXSpan"></span>
+
+	<p id="demoId"></p>
+	<p id="autoFuncId"> </p>
+
+	<div id=nodeInJsDiv1> Div Tag1: My First Node Exp(innerHTML)
+	<p id="nodeInJsP1" style="background-color: red;"> P tag1: </p>
+	</div>
+	<div id=nodeInJsDiv2> Div Tag2: My First Node Exp(firstChild.nodeValue)
+	<p id="nodeInJsP2"> P tag2: </p>
+	</div>
+	<div id=nodeInJsDiv3> Div Tag3: My First Node Exp(nodeChild[0].nodeVaule)
+	<p id="nodeInJsP3"> P tag3: </p>
+	<p id="nodeInJsP3P1"></p>
+	</div>
+
+	</div>
+	<form name="mySearchForm" action="" method="get" accept-charset="utf-8" onsubmit="return formValidate()">
+		<label for="search">Search:<input type="text" name="search" value="" placeholder="Search Anything"></label>
+		<button type="submit">Search</button>
+	</form>
+	
+	<input id="inputNumId" type="number" name="number" min="10" max="200" required="required">
+	<button onclick="myInputFunction()">OK</button>
+	<p id="inpDemo"></p>
+
+	<p id="jslist2"> </p>
+	<p id="jslist" onmouseenter="hello2(),hello3()"> </p>
+	<p id="jslist3"> </p>
+	<button id="btn">Click Me!</button>
+	<p id="jslist4"></p>
+	
+	<p id="ajaxP"></p>
+	<p>AJAX Enabled Start typing a name in the input field below:</p>
+	<p>Suggestions: <span id="txtHint"></span></p> 
+	<p>First name: <input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
+	
+	<div id="showtempdev" style="margin: 10px auto;">
+		<button onclick="showTemplate(),hidediv2(),hidediv3(),setTimeout(templatealert,2000)", onmouseenter="welcomemsgextend()" onmouseleave="welcomemsgshrink()" class="templatebtn">Template1</button>
+	</div>
+
+	<div id="showtempdev2" style="margin: 10px auto;">
+		<button onclick="showTemplate(),replaceText(),setTimeout(templatealert,2000)" class="templatebtn2">Template2</button>
+	</div>
+	<div id="showtempdev3" style="margin: 10px auto;">
+		<button onclick="showTemplate(),setTimeout(templatealert,2000)" class="templatebtn3">Template3</button>
+	</div>
+	
+	<div>
+		<canvas id="mycanvas" width="300" height="150" style="border:px solid #d3d3d3;">
+			
+		</canvas>
+	</div>
+
+
+
+	<div class="left">
+	  <p>Left Menu</p>
+	</div>
+
+	<div class="main">
+	  <p>Main Content</p>
+	</div>
+
+	<div class="right">
+	  <p id="drag1" draggable="true" ondragstart="drag(event)">Right Content</p>
+	</div>
+		<picture>
+			<source src="med-res.jpg" media="(max-widh:300px)">
+			<source src="med-res.jpg" media="(max-widh:900px)">
+			<source src="med-res.jpg" >
+			<img src="" alt="Flowers" style="width:auto;">
+		</picture>
+
+		<p>Drag the p element back and forth between the two rectangles:</p>
+
+		<div class="droptarget">
+		  <p draggable="true" id="dragtarget">Drag me!</p>
+		</div>
+
+		<div class="droptarget"></div>
+
+		<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
+
+		<p id="demo"></p>
+
+	<div style="background-color: red;width: 20%;height: 20%;border: 1px double grey;box-shadow: 0 0 10px 4px black;text-align: center;padding: 0 auto;margin: 10px auto;position: sticky;left:100px;top:50px;float: right;overflow: auto;opacity: 0.5;">
+		<div style="min-width: 100px;min-height: 100px;">
+			<h2>I WILL FLOAT LIKE A FLOATING BANNER</h2>
+		</div>
+	</div>
+
+	<template> <!-- Hidden by default from users, JavaScript can display it. -->
+		<h2>Template</h2>
+		<img src="" alt="Flower Image">	
+	</template>
+
+	<!-- <script type="text/javascript" src="js/myjs.js"></script> -->
+
+	<script>
+		window.onload = function(){
+			var element = document.createElement("script");
+			element.src = "js/myjs.js";
+			document.body.appendChild(element);
+		}
+	</script>
+</body>
+</html5>

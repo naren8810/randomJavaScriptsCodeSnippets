@@ -1,0 +1,120 @@
+body{
+	background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6{
+	text-align: center;
+	font-size: 12vw;
+}
+
+nav{
+	background-color: red;
+}
+
+nav ul.mynavul{
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #333;
+}
+
+ul.mynavul li{
+	display: inline-block;
+}
+
+
+nav ul.mynavul li a{
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+nav ul.mynavul li a:hover:not(.active){
+	background-color: #111;
+}
+
+button:hover{
+	cursor: pointer;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+#welcomemsg{
+	text-transform: capitalize;
+	
+}
+
+#showtempdev{
+	
+	width: 100px;
+	height: 40px;
+}
+
+.templatebtn{
+	border-radius: 3px 6px 12px 24px;
+	background-color: darkgreen;
+	width: 100%;
+	height: 100%;
+	color: whitesmoke;
+	box-shadow: 0 0 5px blue;
+}
+
+#showtempdev2{
+	display: none;
+	width: 100px;
+	height: 40px;
+}
+
+.templatebtn2{
+	border-radius: 3px 6px 12px 24px;
+	background-color: darkgreen;
+	width: 100%;
+	height: 100%;
+	color: whitesmoke;
+	box-shadow: 0 0 5px blue;
+}
+
+#showtempdev3{
+	visibility: hidden;
+	width: 100px;
+	height: 40px;
+}
+
+.templatebtn3{
+	border-radius: 3px 6px 12px 24px;
+	background-color: darkgreen;
+	width: 100%;
+	height: 100%;
+	color: whitesmoke;
+	box-shadow: 0 0 5px blue;
+}
+
+/* p#intromsg::before{
+	content: url("smily.gif");
+}
+
+p#intromsg::after{
+	content: url("smily.gif");
+	max-width: 10px;
+	max-height: 10px;
+} */
+
+
+::selection {
+  color: red;
+  background: yellow;
+}
+
+.droptarget {
+  float: left; 
+  width: 100px; 
+  height: 35px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
